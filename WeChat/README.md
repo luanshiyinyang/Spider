@@ -13,7 +13,7 @@
 	- 爬取并解析
 		- 爬取爱词霸提供的开放[API接口](http://open.iciba.com/dsapi/)信息。
 			- 对该API提供的Json数据格式化如下，该接口需要得到的核心信息就是英文句子和中文翻译。
-			- ![](/asset/day.png)
+			- ![](/WeChat/asset/day.png)
 			- 使用requests对得到的response调用json方法即可解析json字符串为字典，代码如下。
 				- ```python
 					def get_sentence():
@@ -33,7 +33,7 @@
 					```
 		- 爬取天气网站的开放[API接口](http://t.weather.sojson.com/api/weather/city/101190201)信息。
 			- 对该API提供的Json数据格式化如下，该接口的核心信息是当天的天气信息，过去的几天和后来几天可以忽略（按照需求）。
-			- ![](/asset/weather.png)
+			- ![](/WeChat/asset/weather.png)
 			- 使用requests对得到的response调用json方法即可解析json字符串为字典，并索引需要的信息进行相关的处理组合需要字符串即可，代码如下。
 				- ```python
 					def get_weather(city_no):
@@ -123,8 +123,8 @@
 		- 该脚本建议后台进程部署，一旦运行便会自动阻塞，无法使用一般方式终止。
 - 运行结果
 	- 注意这里是发送给指定昵称搜索到的第一个，多个好友同一个昵称需要进行筛选。
-	- ![](/asset/rst_cmd.png)
-	- ![](/asset/result.jpg)
+	- ![](/WeChat/asset/rst_cmd.png)
+	- ![](/WeChat/asset/result.jpg)
 - 补充说明
 	- 完整的代码已经上传到我的Github，欢迎Star或者Fork。
 	- API地址来源其他博客。
