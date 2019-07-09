@@ -79,16 +79,18 @@ def auto_send():
  
  
 if __name__ == "__main__":
-    # 程序等待，直到到达时间第一次运行
+    # 程序等待，直到到达时间第一次运行，这里设置为早上8点
+    bot = Bot(console_qr=2, cache_path="botoo.pkl")
     while True:
-        if time.localtime().tm_hour >= 8:
+        if time.localtime().tm_hour == 8:
             break
     
-    # 扫码登录，Windows系统
-    bot = Bot()
+    # 初始化机器人，扫码登陆微信，适用于Windows系统
+    # bot = Bot()
  
-    # 扫码登录，Linux系统
-    # bot = Bot(console_qr=2, cache_path="botoo.pkl")
+    # # Linux系统，执行登陆请调用下面的这句
+    bot = Bot(console_qr=2, cache_path="botoo.pkl")
  
     # 调用函数进行消息发送
     auto_send()
+  
